@@ -2,6 +2,10 @@
 title: "Melanie Mayer"
 ---
 
-### This webpage
+Welcome to my website. Here I will tell a bit about myself as well as demonstrate some of the skills I have developed.
 
-Here I will tell a bit about myself as well as demonstrate some of the skills I have.
+I am a biostatistics PhD candidate at Columbia University Mailman School of Public Health. I am mainly interested in causal inference, particularly in application to global health and health disparities.
+
+My resume can be reached [here](about.html).
+
+Some demonstration of plots I have done can be reached [here](dashboard.html).
