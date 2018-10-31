@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+### My Resume
+
+<img src = "images/mel_resume_2018spring.png" style = "width:80%">
