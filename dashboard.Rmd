@@ -19,9 +19,9 @@ library(plotly)
 set.seed(88)
 
 rest_inspection_data = rest_inspec %>%
-  filter(boro == "MANHATTAN") %>%
   separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>%
-  mutate(year = as.integer(year), month = as.integer(month), day = as.integer(day)) %>%
+  mutate(year = as.integer(year), month = as.integer(month), day = as.integer(day),
+         cuisine_description = factor(cuisine_description)) %>%
   filter(year == 2016) %>%
   sample_n(5000)
 
@@ -31,28 +31,62 @@ rest_inspection_data = rest_inspec %>%
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart A
+###Grade Breakdown
 
 ```{r}
 rest_inspection_data %>%
-  plot_ly(x = ~day, y = ~score, color = ~day, type = "bar")
+  mutate(grade = factor(grade),
+         boro = factor(boro)) %>%
+  group_by(boro, grade) %>%
+  count(grade) %>%
+  group_by(boro) %>%
+  mutate(total = sum(n),
+         grade_perc = round(n/total, 2)) %>%
+  select(-n, total) %>%
+  spread(key = grade, value = grade_perc) %>%
+  rename(missing = `<NA>`, no_grade = `Not Yet Graded`) %>%
+  replace_na(list(A = 0, B = 0, C = 0, no_grade = 0, P = 0, Z = 0, missing = 0)) %>%
+  ungroup(boro) %>%
+  mutate(boro = fct_reorder(boro, A)) %>% 
+  plot_ly(x = ~A, y = ~boro, type = 'bar', orientation = 'h', name = 'A') %>%
+  add_trace(x = ~B, y = ~boro, type = 'bar', orientation = 'h', name = 'B') %>%
+  add_trace(x = ~C, y = ~boro, type = 'bar', orientation = 'h', name = 'C') %>%
+  add_trace(x = ~P, y = ~boro, type = 'bar', orientation = 'h', name = 'P') %>%
+  add_trace(x = ~missing, y = ~boro, type = 'bar', orientation = 'h', name = 'Missing') %>%
+  layout(barmode = 'stack',
+         xaxis = list(title = "Percent"),
+         yaxis = list(title = ""))
+
+
+
 ```
 
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart B
+###Inspection Results
 
 ```{r}
-rest_inspection_data %>% 
-  count(score) %>% 
-  plot_ly(x = ~score, y = ~n, color = ~score, type = "bar")
+rest_inspection_data %>%
+  mutate(boro = fct_reorder(boro, score)) %>% 
+  plot_ly(y = ~score, color = ~boro, type = "box", colors = "Set2") %>%
+  layout(xaxis = list(title = ""),
+         yaxis = list(title = 'Score'))
 ```
 
-### Chart C
+### Inspections per Month
 
 ```{r}
-rest_inspection_data %>% 
-  plot_ly(y = ~score, color = ~factor(month), type = "box", colors = "Set2")
+rest_inspection_data %>%
+  mutate(month = factor(month),
+         month = month.name[month],
+         month = forcats::fct_relevel(month, "January", "February", "March", "April", "May",
+                                      "June", "July", "August", "September", "October", 
+                                      "November", "December")) %>%
+  count(month) %>%
+  plot_ly(x = ~month, y = ~n, type = 'scatter', mode = 'lines') %>%
+  layout(xaxis = list(title = "", tickangle = 270),
+         yaxis = list(title = 'Count',
+                      range = c(0,550)))
 
 ```
