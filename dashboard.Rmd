@@ -1,5 +1,5 @@
 ---
-title: "NYC Restaurant Inspections from 2017"
+title: "NYC Restaurant Inspections from 2016"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -15,6 +15,7 @@ library(plotly)
 
 
 ```{r}
+#tidy data
 
 set.seed(88)
 
@@ -22,8 +23,8 @@ rest_inspection_data = rest_inspec %>%
   separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>%
   mutate(year = as.integer(year), month = as.integer(month), day = as.integer(day),
          cuisine_description = factor(cuisine_description)) %>%
-  filter(year == 2016) %>%
-  sample_n(5000)
+  filter(year == 2016) %>% #filter out reviews from 2016
+  sample_n(5000) #randomly select observations to make better plots
 
 ```
 
@@ -34,6 +35,8 @@ Column {data-width=500}
 ###Grade Breakdown
 
 ```{r}
+#create bar chart demonstrating percent received each grade per boro
+
 rest_inspection_data %>%
   mutate(grade = factor(grade),
          boro = factor(boro)) %>%
@@ -67,6 +70,8 @@ Column {data-width=500}
 ###Inspection Results
 
 ```{r}
+#boxplots to show distribution of scores per boro
+
 rest_inspection_data %>%
   mutate(boro = fct_reorder(boro, score)) %>% 
   plot_ly(y = ~score, color = ~boro, type = "box", colors = "Set2") %>%
@@ -77,6 +82,8 @@ rest_inspection_data %>%
 ### Inspections per Month
 
 ```{r}
+#Check how frequent retaurants were inspected per month in 2016
+
 rest_inspection_data %>%
   mutate(month = factor(month),
          month = month.name[month],
