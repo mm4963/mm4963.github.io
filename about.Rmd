@@ -1,5 +1,7 @@
 ---
-title: "My Resume"
+title: " "
 ---
 
-<img src = "images/mel_resume_2018spring.png" style = "width:80%"> 
+
+<img src = "images/Mely_CV_pg1.png" style = "width:80%">
+<img src = "images/Mely_CV_pg2.png" style = "width:80%"> 
