@@ -2,10 +2,26 @@
 title: "Melanie Mayer"
 ---
 
-Welcome to my website. Here I will tell a bit about myself as well as demonstrate some of the skills I have developed.
+![](./images/IMG_2797.jpeg){width=40%}
 
-I am a biostatistics PhD candidate at Columbia University Mailman School of Public Health. I am mainly interested in causal inference, particularly in application to global health and health disparities. I would like to use causal inference methods to run studies ultimately used to promote reasearch backed policy change. 
+I am a doctoral candidate in Biostatistics at Columbia University Mailman School of Public Health. I am mainly interested in causal inference methods with an application to global health, health disparities and environmental health studies.
+
+Currently, I work with Dr. [Linda Valeri](https://www.lindavaleri.com/) on the evaluation of the external validity of epidemiological investigations on environmental mixtures and on the evaluation of current available machine learning approaches for the analysis of the effects of environmental mixtures on failure time outcomes. 
+
 
 My resume can be reached [here](about.html).
 
 Some demonstration of plots I have done can be reached [here](dashboard.html).
+
+
+#### Contact Information
+Melanie Mayer \
+[Department of Biostatistics](https://www.publichealth.columbia.edu/academics/departments/biostatistics) \
+[Columbia Mailman School of Public Health](https://www.publichealth.columbia.edu/) \
+722 West 168th Street, Room 657 \
+New York, NY 10032 
+
+Email: <mm4963@cumc.columbia.edu>
+
+
+
