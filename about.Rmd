@@ -3,5 +3,6 @@ title: " "
 ---
 
 
-<img src = "images/Mely_CV_pg1.png" style = "width:80%">
-<img src = "images/Mely_CV_pg2.png" style = "width:80%"> 
+<img src = "images/Mely_CV_Spring2021_1.png" style = "width:80%">
+<img src = "images/Mely_CV_Spring2021_2.png" style = "width:80%">
+<img src = "images/Mely_CV_Spring2021_3.png" style = "width:80%">
