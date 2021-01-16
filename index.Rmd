@@ -2,7 +2,13 @@
 title: "Melanie Mayer"
 ---
 
+
+<center>
+
 ![](./images/IMG_2797.jpeg){width=40%}
+
+</center>
+
 
 I am a doctoral candidate in Biostatistics at Columbia University Mailman School of Public Health. My research focuses on causal inference methods with an application on global health, health disparities and environmental health studies.
 
