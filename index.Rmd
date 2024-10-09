@@ -10,9 +10,7 @@ title: "Melanie Mayer"
 </center>
 
 
-I am a doctoral candidate in Biostatistics at Columbia University Mailman School of Public Health. My research focuses on causal inference methods with an application on global health, health disparities and environmental health studies.
-
-Currently, I work with [Dr. Linda Valeri](https://www.lindavaleri.com/) on the evaluation of the external validity of epidemiological investigations on environmental mixtures and on the evaluation of the current available machine learning approaches for the analysis of the effects of environmental mixtures on failure time outcomes. 
+Hi! I am a Post Doctoral Fellow currently working with Drs. Rebecca Hubbard and Blanca Himes. Currently, my research focuses on statistical methods for analyzing EHR data with a focus on asthma outcomes. I previously completed my PhD in Biostatistics at Columbia University Mailman School of Public Health under the guidance of [Dr. Linda Valeri](https://www.lindavaleri.com/). My doctoral research focused on the evaluation of the external validity of epidemiological investigations on environmental mixtures and on the evaluation of the current available machine learning approaches for the analysis of the effects of environmental mixtures on failure time outcomes. My research interests include causal inference methods, global health, health disparities and environmental health. 
 
 
 My CV can be reached [here](about.html).
