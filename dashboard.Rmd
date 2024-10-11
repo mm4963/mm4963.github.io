@@ -6,15 +6,15 @@ output:
     vertical_layout: fill
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, eval = F}
 library(flexdashboard)
 library(tidyverse)
-library(p8105.datasets)
+library(p8105.datasets) # no longer available
 library(plotly)
 ```
 
 
-```{r}
+```{r, eval = F}
 #tidy data
 
 set.seed(88)
@@ -34,7 +34,7 @@ Column {data-width=500}
 
 ###Grade Breakdown
 
-```{r}
+```{r, eval = F}
 #create bar chart demonstrating percent received each grade per boro
 
 rest_inspection_data %>%
@@ -69,7 +69,7 @@ Column {data-width=500}
 
 ###Inspection Results
 
-```{r}
+```{r, eval = F}
 #boxplots to show distribution of scores per boro
 
 rest_inspection_data %>%
@@ -81,7 +81,7 @@ rest_inspection_data %>%
 
 ### Inspections per Month
 
-```{r}
+```{r, eval = F}
 #Check how frequent retaurants were inspected per month in 2016
 
 rest_inspection_data %>%
