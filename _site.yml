@@ -6,7 +6,7 @@ navbar:
     - text: "CV"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<mm4963@cumc.columbia.edu>
+      href: mailto:<melanie.mayer@pennmedicine.upenn.edu>
     - icon: fa-github fa-lg
       href: http://github.com/mm4963/
 output:
