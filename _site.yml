@@ -9,7 +9,7 @@ navbar:
       href: mailto:<melanie.mayer@pennmedicine.upenn.edu>
     - icon: fa-github fa-lg
       href: http://github.com/mm4963/
-    - text: "Mixture's Vignette"
+    - text: "Software"
       href: mixture_survival_vignette.html
 output:
   html_document:
