@@ -10,7 +10,7 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/mm4963/
     - text: "Software"
-      href: mixture_survival_vignette.html
+      href: mixture_survival_vignette_Updated2025.html
 output:
   html_document:
     theme: flatly
